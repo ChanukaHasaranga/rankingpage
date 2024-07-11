@@ -254,7 +254,11 @@ import 'package:rankingpage/service.dart';
 import 'package:rankingpage/statemanegemnt/fillcount.dart';
 
 class ProgressBar extends StatefulWidget {
-  @override
+ int ID;
+ ProgressBar({
+  
+  required this.ID,
+  super.key});
   _ProgressBarState createState() => _ProgressBarState();
 }
 
@@ -279,7 +283,7 @@ class _ProgressBarState extends State<ProgressBar> {
   void _fetchAndAddTime() async {
     try {
    
-   int minutes = await apiService.getMinutesById(2);
+   int minutes = await apiService.getMinutesById(widget.ID);
 
 setState(()  {
    
