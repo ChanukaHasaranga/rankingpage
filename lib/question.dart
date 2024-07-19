@@ -27,9 +27,9 @@ class _questionState extends State<question> {
       padding:  EdgeInsets.only(top: height/60,left: width/30),
       child: GestureDetector(
         onTap: () {
-          Navigator.of(context).push(MaterialPageRoute(builder:(context) {
-            return RankingPage();
-          },));
+         
+         Navigator.of(context).pop();
+         
         },
         child: Icon(
          Icons.arrow_back_ios,

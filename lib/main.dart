@@ -24,7 +24,7 @@ class myapp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
      title: "RankingPage",
-     home: RankingPage(),
+     home: RankingPage(ID: 2,),
     );
   }
 }

@@ -7,7 +7,11 @@ import 'package:rankingpage/question.dart';
 import 'package:rankingpage/statemanegemnt/fillcount.dart';
 
 class RankingPage extends StatefulWidget {
-  const RankingPage({super.key});
+  int ID;
+   RankingPage({
+    
+    required this.ID,
+    super.key});
 
   @override
   State<RankingPage> createState() => _RankingPageState();
@@ -291,7 +295,7 @@ getting(fillCount,timemin);
                         ),
                       ),
                       SizedBox(height: height/200,),
-                      ProgressBar(),
+                      ProgressBar(ID: widget.ID,),
                       // Adding the text below the ProgressBar
                       Padding(
                         padding: EdgeInsets.only(top: height / 100),
